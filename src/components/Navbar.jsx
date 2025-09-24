@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../components/Button";
 import Search from "../components/SearchBar";
 import styles from './Navbar.module.css'
-import LogoImage from "../assets/qtify.png"
+import LogoImage from "../assets/Logo.png"
 
 
 export default function Navbar(){
