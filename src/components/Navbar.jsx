@@ -1,20 +1,18 @@
 import React from "react";
-import "../App.css";
-import MinimalistSearchBar from "./SearchBar";
-import Logo from "./Logo";
-import CustomButton from "./CustomButton";
-import { Grid } from "@mui/material";
+import Button from "../components/Button";
+import Search from "../components/SearchBar";
+import styles from './Navbar.module.css'
+import LogoImage from "../assets/qtify.png"
 
-const Navbar = () => {
-  return (
-    <>
-      <Grid container className="navbar" spacing={4} sx={{ padding: "2rem" }}>
-        <Logo />
-        <MinimalistSearchBar />
-        <CustomButton />
-      </Grid>
-    </>
-  );
-};
 
-export default Navbar;
+export default function Navbar(){
+    return(
+        <>
+            <nav className={styles.navbar}>
+                <div className={styles.logoDiv}><img  src={LogoImage} alt="logo" width={67}/></div>
+                <Search search={"Search a song of your choice"}/>
+                <Button children="Give Feedback"/>
+            </nav>
+        </>
+    )
+}
