@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+// import React, { useEffect } from "react";
 import { Card, CardContent, CardMedia, Typography, Chip } from "@mui/material";
 
 const CardMusic = ({ card }) => {
@@ -21,7 +21,7 @@ const CardMusic = ({ card }) => {
           />
         </CardContent>
       </Card>
-      <Typography variant="h6">{card.title}</Typography>
+      <Typography>{card.title}</Typography>
     </div>
   );
 };
