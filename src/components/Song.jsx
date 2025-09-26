@@ -17,7 +17,7 @@ const Song = () => {
         `https://qtify-backend.labs.crio.do/genres`
       );
       setSong(songs.data);
-      console.log(songs.data);
+      console.log(songs.data, "songs data");
       setGenre(genres.data);
       setFilterSong(songs.data);
     };
@@ -40,15 +40,13 @@ const Song = () => {
         <h5>Songs</h5>
       </div>
       <div className="albums album-bar">
-        <Tabs value="all" onChange={handleChange}>
+        <Tabs onChange={handleChange}>
+          <Tab key="all" id="All" label="All" wrapped />
           {genre.data &&
             genre.data.map((item, index) =>
-              index === 0 ? (
-                <Tab key="all" value="All" id="all" label="All" wrapped />
-              ) : (
+              (
                 <Tab
                   key={item.key}
-                  value={item.label}
                   id={item.key}
                   label={item.label}
                   wrapped
